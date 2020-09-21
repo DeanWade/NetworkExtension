@@ -1,0 +1,42 @@
+{
+    "name": "custom.python.network_connection_host",
+    "version": "1.6",
+    "type": "python",
+    "entity": "HOST",
+    "processTypes":[0,1,4],
+    "source": {
+      "package": "network_connection_host",
+      "className": "NetworkExtension",
+      "install_requires": [
+        "psutil>=5.7.2"
+      ],
+      "activation": "Singleton"
+    },
+    "metricGroup": "network_connection.host",
+    "metrics": [
+      {
+        "timeseries": {
+          "key": "network_connection",
+          "unit": "Count",
+          "displayname": "Network Connection"
+        }
+      }
+    ],
+    "configUI": {
+      "displayName": "OneAgent Network Stats Extension"
+    },
+    "ui": {
+      "keycharts" : [
+        {
+          "group" : "network_connection",
+          "title" : "network connection",
+          "series" : [
+            {
+              "key" : "network_connection",
+              "displayname" : "Network Connection"
+            }
+          ]
+        }
+      ]
+    }
+  }
