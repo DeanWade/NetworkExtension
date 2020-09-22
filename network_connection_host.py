@@ -1,6 +1,8 @@
 import psutil
 
 from ruxit.api.base_plugin import BasePlugin
+from ruxit.api.data import PluginMeasurement
+from ruxit.api.selectors import FromPluginSelector
 
 class NetworkExtension(BasePlugin):
     def query(self, **kwargs):
